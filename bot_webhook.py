@@ -23,7 +23,7 @@ from coreguard_core import ALLOWED_UPDATES, build_application, setup_logging
 def main() -> None:
     setup_logging()
 
-    base_url = os.getenv("WEBHOOK_URL", "").strip().rstrip("/")
+    base_url = os.getenv("WEBHOOK_URL", "https://educorecoreguard-bot.fadehost.app").strip().rstrip("/")
     if not base_url.startswith("https://"):
         raise SystemExit("[CoreGuard] WEBHOOK_URL manquant ou invalide : il doit commencer par https://")
 
